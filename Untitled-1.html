@@ -107,7 +107,7 @@
     </header>
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <main>
-            <div class="bg-white rounded-3xl shadow-sm p-4 mb-4">
+            <div class="bg-white rounded-xl shadow-sm p-4 mb-4">
                 <div class="flex gap-2 overflow-x-auto pb-2" id="category-buttons">
                     <button class="category-btn px-4 py-2 bg-blue-600 text-white rounded"
                         data-category="general">All</button>
@@ -152,7 +152,7 @@
 
         const apiKey = '7e1bf2bcfe854c49bd2452eac0d1e2b9';
         async function fetchNews(category = 'general') {
-            const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`);
+            const response = await fetch(`https://corsproxy.io/?https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`);
             const data = await response.json();
             const articles = data.articles;
             const newsContainer = document.getElementById('news-articles');
